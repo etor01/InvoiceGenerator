@@ -1,0 +1,260 @@
+.document {
+  background: #ffffff;
+  width: 100%;
+  max-width: 820px;
+  min-height: 1050px;
+  border-radius: 12px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0,0,0,0.1);
+  padding: 48px 52px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #1a1d27;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ─── Header ───────────────────────────────────────── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+  gap: 24px;
+}
+
+.headerLeft {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.logo {
+  max-height: 64px;
+  max-width: 160px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.companyName {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0d0f1a;
+  margin-bottom: 4px;
+}
+
+.senderAddress {
+  font-size: 12px;
+  color: #6b7094;
+  line-height: 1.6;
+}
+
+.headerRight {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.invoiceTitle {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #6c63ff;
+  margin-bottom: 4px;
+}
+
+.invoiceNumber {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0d0f1a;
+  margin-bottom: 8px;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 99px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* ─── Accent Bar ────────────────────────────────────── */
+.accentBar {
+  height: 3px;
+  background: linear-gradient(90deg, #6c63ff, #00d4aa);
+  border-radius: 99px;
+  margin-bottom: 28px;
+}
+
+/* ─── Meta Row ──────────────────────────────────────── */
+.metaRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 36px;
+  gap: 24px;
+}
+
+.billTo { flex: 1; }
+
+.metaLabel {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #9ca3c0;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.clientName {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0d0f1a;
+  margin-bottom: 4px;
+}
+
+.clientDetail {
+  font-size: 13px;
+  color: #555a7a;
+  line-height: 1.6;
+}
+
+.dateBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 220px;
+  background: #f8f9fc;
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+
+.dateRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.dateValue {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1d27;
+}
+
+/* ─── Table ─────────────────────────────────────────── */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0;
+}
+
+.table thead tr {
+  background: #6c63ff;
+  color: #ffffff;
+}
+
+.table thead th {
+  padding: 11px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.thDesc { text-align: left; border-radius: 6px 0 0 6px; }
+.thNum { text-align: right; }
+.thNum:last-child { border-radius: 0 6px 6px 0; padding-right: 14px; }
+
+.tdDesc {
+  padding: 12px 14px;
+  color: #1a1d27;
+  font-size: 14px;
+}
+
+.tdNum {
+  padding: 12px 14px;
+  text-align: right;
+  color: #3a3f5c;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.rowEven { background: #ffffff; }
+.rowOdd  { background: #f8f9fc; }
+
+.table tbody tr:last-child .tdDesc { border-bottom: 2px solid #e8e9f0; }
+.table tbody tr:last-child .tdNum  { border-bottom: 2px solid #e8e9f0; }
+
+/* ─── Totals ────────────────────────────────────────── */
+.totalsSection {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+  margin-bottom: 32px;
+}
+
+.totalsBlock {
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 24px;
+  background: #f8f9fc;
+  border-radius: 10px;
+}
+
+.totalsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #555a7a;
+}
+
+.totalDue {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #e0e0ef;
+  padding-top: 12px;
+  margin-top: 4px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #6c63ff;
+}
+
+/* ─── Footer ────────────────────────────────────────── */
+.footer {
+  border-top: 1px solid #e8e9f0;
+  padding-top: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footerSection {}
+
+.footerLabel {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #9ca3c0;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.footerText {
+  font-size: 13px;
+  color: #555a7a;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* ─── Thank You ─────────────────────────────────────── */
+.thankYou {
+  text-align: center;
+  font-size: 12px;
+  color: #9ca3c0;
+  padding-top: 16px;
+  border-top: 1px dashed #e8e9f0;
+}
