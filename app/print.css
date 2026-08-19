@@ -1,0 +1,46 @@
+@media print {
+  /* Hide everything except the invoice preview */
+  .app-header,
+  .builder-panel,
+  .preview-panel-toolbar,
+  .mobile-tab-bar,
+  .sticky-download-bar,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Full page for the preview */
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  .app-main {
+    display: block !important;
+    height: auto !important;
+  }
+
+  .preview-panel {
+    background: #fff !important;
+    padding: 0 !important;
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .invoice-document {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    border: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    page-break-inside: avoid;
+  }
+
+  @page {
+    size: A4;
+    margin: 0.5in;
+  }
+}
