@@ -1,46 +1,106 @@
+/* ─── High-Fidelity Print & PDF Stylesheet ───────────────────── */
 @media print {
-  /* Hide everything except the invoice preview */
+  @page {
+    size: A4 portrait;
+    margin: 12mm 15mm;
+  }
+
+  *, *::before, *::after {
+    background: transparent !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+  }
+
+  .no-print,
   .app-header,
-  .builder-panel,
-  .preview-panel-toolbar,
-  .mobile-tab-bar,
-  .sticky-download-bar,
-  .no-print {
+  .control-sidebar,
+  .app-footer,
+  .add-item-trigger,
+  .row-delete-btn,
+  .party-edit-btn,
+  .logo-remove-pill,
+  .modal-backdrop {
     display: none !important;
   }
 
-  /* Full page for the preview */
-  body {
-    background: #fff !important;
-    color: #000 !important;
-    margin: 0;
-    padding: 0;
-  }
-
-  .app-main {
-    display: block !important;
-    height: auto !important;
-  }
-
-  .preview-panel {
-    background: #fff !important;
+  .app-layout {
+    background: #ffffff !important;
     padding: 0 !important;
+    margin: 0 !important;
     display: block !important;
-    width: 100% !important;
   }
 
-  .invoice-document {
-    box-shadow: none !important;
-    border-radius: 0 !important;
+  .workspace-area {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  .invoice-sheet {
+    background: #ffffff !important;
+    color: #000000 !important;
     border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
-    margin: 0 !important;
+    min-height: auto !important;
+  }
+
+  .sheet-accent-bar {
+    display: block !important;
+    background: #000000 !important;
+    height: 3px !important;
+  }
+
+  .party-card,
+  .meta-card,
+  .totals-summary-card,
+  .balance-due-box {
+    background: transparent !important;
+    border: 1px solid #e5e7eb !important;
+  }
+
+  .line-table thead tr {
+    background: #f3f4f6 !important;
+    border-bottom: 2px solid #000000 !important;
+  }
+
+  .line-table thead th {
+    color: #000000 !important;
+  }
+
+  .line-table tbody tr {
+    border-bottom: 1px solid #e5e7eb !important;
     page-break-inside: avoid;
   }
 
-  @page {
-    size: A4;
-    margin: 0.5in;
+  .item-desc-input,
+  .item-num-input,
+  .sheet-inv-input,
+  .meta-input,
+  .note-textarea {
+    border: none !important;
+    background: transparent !important;
+    padding: 2px 0 !important;
+    color: #000000 !important;
+  }
+
+  .item-desc-input::placeholder,
+  .item-num-input::placeholder,
+  .note-textarea::placeholder {
+    color: transparent !important;
+  }
+
+  .balance-due-box {
+    border: 2px solid #000000 !important;
   }
 }
